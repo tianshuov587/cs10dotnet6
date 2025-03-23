@@ -18,7 +18,7 @@ public class Person : object, IComparable<Person?>
   // static method to "multiply"
   public static Person Procreate(Person p1, Person p2)
   {
-    Person baby = new()
+    Person baby = new()   
     {
       Name = $"Baby of {p1.Name} and {p2.Name}"
     };
@@ -28,7 +28,7 @@ public class Person : object, IComparable<Person?>
 
     return baby;
   }
-
+  
   // instance method to "multiply"
   public Person ProcreateWith(Person partner)
   {
@@ -62,6 +62,7 @@ public class Person : object, IComparable<Person?>
   public event EventHandler? Shout;
 
   // data field 
+
   public int AngerLevel;
 
   // method 
@@ -76,6 +77,7 @@ public class Person : object, IComparable<Person?>
         // ...then call the delegate
         Shout(this, EventArgs.Empty);
       }
+
     }
   }
 
